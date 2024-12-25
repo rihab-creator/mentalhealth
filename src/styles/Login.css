@@ -1,0 +1,206 @@
+/* Container for the login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px; /* Adds padding for smaller screens */
+  background-color: #f1f6fb;
+}
+
+.login-content {
+  display: flex;
+  align-items: center;
+  width: 90%; /* Adjusted for smaller screens */
+  max-width: 900px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+}
+
+.login-left {
+  padding: 40px;
+  width: 50%;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.login-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2d4b60;
+}
+
+.login-left input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-left button {
+  width: 100%; /* Adjusted to fit the form container */
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-left button:hover {
+  background-color: #00509e;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.register a:hover {
+  color: #00509e;
+}
+
+.login-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adds padding for smaller screens */
+  box-sizing: border-box;
+}
+
+.login-right img {
+  width: 80%;
+  height: auto;
+}
+
+.or-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.or-separator span {
+  margin: 0 10px;
+  color: #888;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.or-separator:before,
+.or-separator:after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: white;
+  color: #2d4b60;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-login-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.google-login-btn:hover {
+  background-color: #f7f7f7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .login-content {
+      width: 95%; /* Adjust content width for tablets */
+  }
+
+  .login-left,
+  .login-right {
+      width: 100%; /* Stack content vertically */
+  }
+
+  .login-right img {
+      width: 60%; /* Smaller image for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+      padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .login-left h2 {
+      font-size: 28px; /* Adjust heading size */
+  }
+
+  .login-left input {
+      font-size: 14px; /* Smaller input font size */
+  }
+
+  .login-left button {
+      font-size: 14px; /* Adjust button font size */
+  }
+
+  .login-right img {
+      width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+      padding: 5px;
+  }
+
+  .login-left h2 {
+      font-size: 24px;
+  }
+
+  .login-left input {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  .login-left button {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  .login-right img {
+      width: 80%; /* Larger image for small screens */
+  }
+}

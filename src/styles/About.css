@@ -1,0 +1,248 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .about-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+
+  .about-text p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 10px;  /* Réduit l'espace entre les images */
+    justify-items: center; /* Centre les images horizontalement */
+  }
+  
+  .image-item {
+    width: 150px;  /* Très petite taille de chaque image */
+    height: 150px; /* Assurez-vous que la hauteur et la largeur sont égales pour créer un carré */
+    overflow: hidden; /* Cache la partie de l'image qui dépasse du cercle */
+    border-radius: 60%; /* Applique un arrondi pour créer des images circulaires */
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Couvre toute la zone, sans déformer l'image */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+    
+  
+    .image-grid {
+      grid-template-columns: repeat(1, 1fr); /* Une seule colonne sur petits écrans */
+    }
+  }
+  
+
+  /**Mission  styling*/
+
+
+  .features {
+    background: none;
+    padding: 4rem 0; /* Padding for top and bottom of the section */
+  }
+  
+  .features h2 {
+    font-size: 2rem; /* Ensure consistent font size */
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center; /* Center the text */
+    margin-top: 0; /* Remove any extra margin on top */
+    margin-bottom: 20px; /* Same margin as the other heading */
+  }
+  
+
+  
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .card {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 200px; /* Adjust size here */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  
+  /*Valeurs styling*/
+
+.values {
+  text-align: center;
+  margin: 20px;
+}
+
+.values h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Spacing between levels */
+}
+
+.pyramid-level {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.pyramid-card {
+  position: relative;
+  background-color: #ADD8E6; /* Default color */
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px; /* Default width */
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.level-1 .pyramid-card {
+  background-color: #AFEEEE; /* Red */
+}
+
+.level-2 .pyramid-card {
+  background-color: #B0E0E6; /* Orange */
+  width: 250px; /* Slightly larger */
+}
+
+.level-3 .pyramid-card {
+  background-color:#87CEEB; /* Blue */
+  width: 300px; /* Largest */
+}
+
+.level-label {
+  position: absolute;
+  top: -15px; /* Position above the card */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.pyramid-level > .pyramid-card + .pyramid-card {
+  margin-left: 20px;
+}
+
+/*Styling fondateur*/
+
+.fondateur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.fondateur .text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.fondateur .text h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.fondateur .text p {
+  font-size: 18px;
+  color: #555;
+}
+
+.fondateur .text strong {
+  color: #2c3e50;
+}
+
+.fondateur .image {
+  flex: 0.4;
+  text-align: right;
+}
+
+/* Image styling - centred and not cropped */
+.fondateur .image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; /* Adapte l'image tout en préservant les proportions */
+  object-position: 50% 20%;; /* S'assure que le visage est bien centré */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.mental-health-quote {
+  font-style: italic;
+  font-size: 14px; /* Petite taille */
+  color: black; /* Couleur discrète */
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 10px; /* Légère marge interne */
+  text-align: right;
+}

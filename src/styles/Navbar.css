@@ -1,0 +1,105 @@
+/* Navbar principale */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Monotype Corsiva', cursive;
+  }
+  
+  /* Liens de navigation */
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  /* Bouton de menu mobile */
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Boutons de navigation */
+  .navbar-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Style générique pour les boutons */
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+  
+  /* Bouton Login */
+  .login-btn {
+    background-color: #fff;
+    color: #00008B;
+    border: 2px solid #00008B;
+  }
+  
+  .login-btn:hover {
+    background-color: #00008B;
+    color: #fff;
+  }
+  
+  /* Bouton Sign Up */
+  .signup-btn {
+    background-color: #fff;
+    color: #00008B;
+    border: 2px solid #00008B;
+  }
+  
+  .signup-btn:hover {
+    background-color: #00008B;
+    color: #fff;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    /* Navbar responsive */
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .navbar-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    /* Bouton hamburger visible */
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  
